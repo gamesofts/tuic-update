@@ -67,6 +67,7 @@ LimitNOFILE=infinity
 [Install]
 WantedBy=multi-user.target
 EOF
+mkdir /etc/tuic
 systemctl enable tuic-server.service
 fi
 

@@ -49,8 +49,8 @@ fi
 install -m 755 "${TUIC_FILE}" "/usr/bin/tuic-server"
 rm -r "$TMP_DIRECTORY"
 
-if [[ ! -f "/etc/systemd/system/tuic-server.service" ]]; then
-  cat >"/etc/systemd/system/tuic-server.service" <<'EOF'
+if [[ ! -f "/lib/systemd/system/tuic-server.service" ]]; then
+  cat >"/lib/systemd/system/tuic-server.service" <<'EOF'
 [Unit]
 After=network.target nss-lookup.target
 
